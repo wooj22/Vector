@@ -1,12 +1,12 @@
 #pragma once
+#include <iostream>
+using namespace std;
+
 class Vector2
 {
-private:
-	float x, y;
-
 public:
-	// »ý¼ºÀÚ
-	Vector2(float x = 0, float y = 0) : x(x), y(y) {};
+	float x, y;
+	Vector2(float inputX = 0, float inputY = 0) : x(inputX), y(inputY) {};
 	
 	// operator
 	Vector2 operator+ (const Vector2& vector2);
@@ -14,6 +14,7 @@ public:
 	Vector2 operator* (const Vector2& vector2);
 
 	// member function
+	void Show() { cout << "x : " << x << ", y : " << y << endl; }
 	void Normalize();
 	float Length();
 	float LengthSquared();
