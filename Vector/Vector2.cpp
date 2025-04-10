@@ -33,6 +33,7 @@ void Vector2::Normalize() {
 	//float dist = sqrt(this->x * this->x + this->y * this->y);
 	//this->x = this->x / dist;
 	//this->y = this->y / dist;
+	// 실수 값이 나와서... 아래 처럼 해도 되는건가요...?
 
 	if (this->x > 0) x = 1;
 	if (this->y > 0) y = 1;
