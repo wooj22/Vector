@@ -11,7 +11,7 @@ public:
 	// operator
 	Vector2 operator+ (const Vector2& vector2);
 	Vector2 operator- (const Vector2& vector2);
-	Vector2 operator* (const Vector2& vector2);
+	Vector2 operator* (float n);
 
 	// member function
 	void Show() { cout << "x : " << x << ", y : " << y << endl; }

@@ -19,11 +19,11 @@ Vector2 Vector2::operator- (const Vector2& vector2) {
 	return result;
 }
 
-Vector2 Vector2::operator* (const Vector2& vector2) {
+Vector2 Vector2::operator* (float n) {
 	Vector2 result;
 
-	result.x = this->x * vector2.x;
-	result.y = this->y * vector2.y;
+	result.x = this->x * n;
+	result.y = this->y * n;
 
 	return result;
 }
@@ -33,10 +33,11 @@ void Vector2::Normalize() {
 	//float dist = sqrt(this->x * this->x + this->y * this->y);
 	//this->x = this->x / dist;
 	//this->y = this->y / dist;
-	// 실수 값이 나와서... 아래 처럼 해도 되는건가요...?
 
-	if (this->x > 0) x = 1;
-	if (this->y > 0) y = 1;
+	if (this->x > 0) this->x = 1;
+	else if (this->x < 0) this->x = -1;
+	if (this->y > 0) this->y = 1;
+	else if (this->y < 0) this->y = -1;
 }
 
 // 자신의 길이 반환

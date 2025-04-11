@@ -26,8 +26,9 @@ int main() {
 
 	// operator * 
 	cout << "\n\n// * ¿¬»ê \n";
+	c.x = 1; c.y = 1;
 	c.Show();
-	c = b * a;
+	c = c * 2.0f;
 	c.Show();
 
 	// Normalize
